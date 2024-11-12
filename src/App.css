@@ -18,3 +18,30 @@ nav {
     color: lightgray;
     font-weight: bold;
 }
+
+.counter {
+    display: block;
+    margin: auto;
+    border-radius: 25%;
+    width: 100px;
+    background-color: darkgray;
+}
+
+.counter_count,
+.counter_total {
+    text-align: center;
+}
+
+.counter_op {
+    width: 50%;
+    background-color: brown;
+    border-radius: 25%;
+    border: none;
+}
+
+.total_add {
+    width: 100%;
+    background-color: brown;
+    border-radius: 25%;
+    border: none;
+}

@@ -1,16 +1,16 @@
 //import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar.jsx'
-import Body from './components/Body.jsx'
+import Counter from './components/Counter.jsx'
 
 function App() {
-    //const [count, setCount] = useState(0)
+    //Lägg till formulär till höger ("who counted") + useEffect
 
     return (
-        <div className="container">
+        <>
             <Navbar />
-            <Body />
-        </div>
+            <Counter />
+        </>
     )
 }
 
