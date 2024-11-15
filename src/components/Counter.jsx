@@ -1,9 +1,13 @@
 import React from 'react'
-import ContrivedTotal from './ContrivedTotal.jsx'
+import PropTypes from 'prop-types'
 
-export default function Counter() {
+Counter.propTypes = {
+    total: PropTypes.number,
+    addToTotal: PropTypes.func
+}
+
+export default function Counter(props) {
     const [count, setCount] = React.useState(0)
-    const [total, setTotal] = React.useState(0)
 
     function add() {
         setCount(count + 1)
@@ -13,8 +17,9 @@ export default function Counter() {
         setCount(count - 1)
     }
 
+    //Raise total-value to App to use in formsubmit.
     function totalAdd() {
-        setTotal((preValue) => preValue + count)
+        props.addToTotal(count)
         setCount(0)
     }
 
@@ -32,7 +37,8 @@ export default function Counter() {
             <button className="total_add" onClick={totalAdd}>
                 Add to total
             </button>
-            <ContrivedTotal total={total} />
+            <h1 className="counter_total">{props.total}</h1>
+            <p>total count</p>
         </div>
     )
 }

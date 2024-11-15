@@ -1,15 +1,15 @@
 //import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar.jsx'
-import Counter from './components/Counter.jsx'
+import Body from './components/Body.jsx'
 
 function App() {
-    //Lägg till formulär till höger ("who counted") + useEffect
+    //Lägg till useEffect, som Scrimba windowwidth
 
     return (
         <>
             <Navbar />
-            <Counter />
+            <Body />
         </>
     )
 }

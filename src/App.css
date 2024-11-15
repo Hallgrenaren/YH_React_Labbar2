@@ -45,3 +45,23 @@ nav {
     border-radius: 25%;
     border: none;
 }
+
+.report_form {
+    margin: auto;
+    background-color: brown;
+}
+
+.input_field {
+    padding: 5px;
+    margin: 10px;
+}
+
+.submit_btn {
+    margin: 10px 45% 10px 43%;
+}
+
+.body_container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
