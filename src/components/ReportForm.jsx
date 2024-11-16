@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 ReportForm.propTypes = {
     total: PropTypes.number,
-    submitTotal: PropTypes.func
+    submitTotal: PropTypes.func,
+    submits: PropTypes.number
 }
 
 export default function ReportForm(props) {
@@ -25,7 +26,8 @@ export default function ReportForm(props) {
     function handleSubmit(event) {
         event.preventDefault()
         alert(
-            `Thank you, ${event.target[0].value} ${event.target[1].value}.\nWe have noted a total of ${event.target[2].value} passangers today!`
+            `Thank you, ${event.target[0].value} ${event.target[1].value}.\nWe have noted a total of ${event.target[2].value} passangers today!
+            ${props.submits} report cards have been submited!`
         )
         props.submitTotal()
     }

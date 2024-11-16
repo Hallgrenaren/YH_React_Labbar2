@@ -65,3 +65,7 @@ nav {
     display: flex;
     justify-content: space-around;
 }
+
+.size_text {
+    text-align: center;
+}
