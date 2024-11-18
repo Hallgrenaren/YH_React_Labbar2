@@ -19,14 +19,6 @@ nav {
     font-weight: bold;
 }
 
-.counter {
-    display: block;
-    margin: auto;
-    border-radius: 25%;
-    width: 100px;
-    background-color: darkgray;
-}
-
 .counter_count,
 .counter_total {
     text-align: center;

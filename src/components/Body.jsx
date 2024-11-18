@@ -4,6 +4,8 @@ import React from 'react'
 
 export default function Body() {
     const [total, setTotal] = React.useState(0)
+    //Ändra total eller namn på submitter till useContext på rätt sätt.
+    //useMemo för att minnas något som räknats ut mellan renders (kanske antal submitters?)
     let submits = React.useRef(1)
 
     const totalAddHandlerFunction = (count) => {

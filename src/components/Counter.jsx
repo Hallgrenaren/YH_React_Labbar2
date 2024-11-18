@@ -1,5 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const Container = styled.div`
+    display: block;
+    margin: auto;
+    border-radius: 25%;
+    width: 100px;
+    background-color: darkgray;
+`
 
 Counter.propTypes = {
     total: PropTypes.number,
@@ -24,7 +33,7 @@ export default function Counter(props) {
     }
 
     return (
-        <div className="counter">
+        <Container>
             <div className="counter_count">
                 <h1>{count}</h1>
             </div>
@@ -39,6 +48,6 @@ export default function Counter(props) {
             </button>
             <h1 className="counter_total">{props.total}</h1>
             <p>total count</p>
-        </div>
+        </Container>
     )
 }
