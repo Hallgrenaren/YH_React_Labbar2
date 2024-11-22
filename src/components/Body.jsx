@@ -1,6 +1,7 @@
 import Counter from './Counter.jsx'
 import ReportForm from './ReportForm.jsx'
 import React from 'react'
+import CurrentWeather from './CurrentWeather.jsx'
 
 export default function Body() {
     const [total, setTotal] = React.useState(0)
@@ -20,6 +21,7 @@ export default function Body() {
     return (
         <div className="body_container">
             <Counter total={total} addToTotal={totalAddHandlerFunction} />
+            <CurrentWeather />
             <ReportForm
                 total={total}
                 submits={submits.current}

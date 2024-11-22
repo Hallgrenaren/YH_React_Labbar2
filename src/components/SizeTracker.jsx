@@ -12,13 +12,13 @@ export default function SizeTracker() {
     }, [])
 
     return (
-        <>
+        <div className="size_tracker_div">
             <h1 className="size_text">
                 Site looks better in smaller sizes. Current size:
             </h1>
             <h3 className="size_text">
                 Window width: {windowWidth} Window height: {windowHeight}
             </h3>
-        </>
+        </div>
     )
 }

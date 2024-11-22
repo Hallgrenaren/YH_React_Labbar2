@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ThemeContext from '../ThemeContext.jsx'
 
 ReportForm.propTypes = {
     total: PropTypes.number,
@@ -8,6 +9,8 @@ ReportForm.propTypes = {
 }
 
 export default function ReportForm(props) {
+    const theme = React.useContext(ThemeContext)
+    const className = `report_form_${theme}`
     const [formData, setFormData] = React.useState({
         firstName: '',
         lastName: '',
@@ -33,7 +36,7 @@ export default function ReportForm(props) {
     }
 
     return (
-        <form className="report_form" onSubmit={handleSubmit}>
+        <form className={className} onSubmit={handleSubmit}>
             <h1>Report Card</h1>
             <h2>Who worked today?</h2>
             <input

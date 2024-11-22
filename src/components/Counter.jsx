@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import ThemeContext from '../ThemeContext.jsx'
 
 const Container = styled.div`
     display: block;
@@ -16,6 +17,9 @@ Counter.propTypes = {
 }
 
 export default function Counter(props) {
+    const theme = React.useContext(ThemeContext)
+    const classNameOp = `counter_op_${theme}`
+    const classNameAdd = `total_add_${theme}`
     const [count, setCount] = React.useState(0)
 
     function add() {
@@ -37,13 +41,13 @@ export default function Counter(props) {
             <div className="counter_count">
                 <h1>{count}</h1>
             </div>
-            <button className="counter_op" onClick={subtract}>
+            <button className={classNameOp} onClick={subtract}>
                 –
             </button>
-            <button className="counter_op" onClick={add}>
+            <button className={classNameOp} onClick={add}>
                 +
             </button>
-            <button className="total_add" onClick={totalAdd}>
+            <button className={classNameAdd} onClick={totalAdd}>
                 Add to total
             </button>
             <h1 className="counter_total">{props.total}</h1>
